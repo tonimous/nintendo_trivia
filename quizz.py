@@ -258,22 +258,22 @@ def end_game():
     score_label.config(text=f"Your Final Score is: {score} out of {max_questions}", fg="blue")
     play_again_button.pack(pady=10)
 
-def play_again():
-    global score, used_questions
+def reset_quiz():
+    global score, question_count, used_questions
     score = 0
+    question_count = 0
     used_questions = []
+    play_again_button.pack_forget()  # Hide the play again button
+    next_button.pack(pady=10)  # Show the next button
     load_question()
-    play_again_button.pack_forget()
-    next_button.pack(pady=10)
-    
-
-#Button to play again
-play_again_button = tk.Button(root, text="Play Again", command=play_again, **button_style)
-play_again_button.pack(pady=10)
 
 # Button to the next question
 next_button = tk.Button(root, text="Next Question", command=load_question, **button_style)
 next_button.pack(pady=10)
+
+# Button to play the quiz again
+play_again_button = tk.Button(root, text="Play Again", command=reset_quiz, **button_style)
+play_again_button.pack_forget()  # Ensure the play again button is hidden initially
 
 # Start the question
 load_question()
