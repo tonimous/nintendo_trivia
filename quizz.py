@@ -11,6 +11,16 @@ except sqlite3.Error as e:
     exit(1)
 
 # Create the tables with error handling
+
+try:
+    c.execute('''CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT, 
+        username TEXT UNIQUE NOT NULL, 
+        score INTEGER DEFAULT 0)''')
+except sqlite3.Error as e:
+    print(f"Error creating users table: {e}")
+    conn.close()
+    exit(1)
 try:
     c.execute('''CREATE TABLE IF NOT EXISTS questions (
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
