@@ -178,11 +178,13 @@ score = 0
 question_count = 0
 max_questions = 3  # Set the max number of questions to 3
 used_questions = []  # List to store used question IDs
+timer_seconds = 15  # Set the timer to 15 seconds
 
 # Styling options
 font_style = ("Helvetica", 14)
 button_style = {"font": ("Helvetica", 12), "bg": "#E60012", "fg": "white", "activebackground": "#FFCCD5"}
 label_style = {"font": font_style, "wraplength": 350}
+
 
 # Question and answer labels
 question_label = tk.Label(root, text="", **label_style)
@@ -196,6 +198,9 @@ score_label.pack(pady=10)
 
 feedback_label = tk.Label(root, text="", font=font_style)
 feedback_label.pack(pady=10)
+
+timer_label = tk.Label(root, text="", font=font_style)
+timer_label.pack(pady=10)
 
 # Load a random question from the database with error handling
 def load_question():
@@ -236,6 +241,8 @@ def load_question():
         score_label.config(text=f"Score: {score}")
         disable_answers()
         next_button.config(state='normal')  # Enable the next button after an answer is selected
+        root.after_cancel(timer_id)  # Cancel the timer
+
 
     for ans in answers:
         btn = tk.Button(answers_frame, text=ans[1], command=lambda is_correct=ans[2]: check_answer(is_correct), **button_style)
@@ -243,6 +250,23 @@ def load_question():
 
     question_count += 1
     next_button.config(state='disabled')  # Disable the next button initially
+    timer_seconds = 15
+    update_timer()
+
+ # Start the timer
+def update_timer():
+    global timer_seconds, timer_id
+    if timer_seconds > 0:
+        timer_seconds -= 1
+        timer_label.config(text=f"Time left: {timer_seconds} seconds")
+        timer_id = root.after(1000, update_timer)
+    else:
+        disable_answers()
+        next_button.config(state='disabled')
+        feedback_label.config(text="Time's up!", fg="red")
+        timer_label.pack_forget()
+        end_game()
+
 
 def disable_answers():
     for widget in answers_frame.winfo_children():
@@ -259,13 +283,17 @@ def end_game():
     play_again_button.pack(pady=10)
 
 def reset_quiz():
-    global score, question_count, used_questions
+    global score, question_count, used_questions, timer_seconds
     score = 0
     question_count = 0
     used_questions = []
+    timer_seconds = 15
     play_again_button.pack_forget()  # Hide the play again button
+    timer_label.pack(pady=10) # Show the timer
     next_button.pack(pady=10)  # Show the next button
+    feedback_label.pack_forget()  # Hide the feedback label
     load_question()
+
 
 # Button to the next question
 next_button = tk.Button(root, text="Next Question", command=load_question, **button_style)
