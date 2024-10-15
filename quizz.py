@@ -48,6 +48,22 @@ questions_data = [
         ]
     },
     {
+    "question": "In which \"Pokémon\" game was the Johto region introduced?",
+    "answers": [
+      {"text": "Pokémon Gold/Silver", "correct": True},
+      {"text": "Pokémon Ruby/Sapphire", "correct": False},
+      {"text": "Pokémon Diamond/Pearl", "correct": False}
+    ]
+    },
+    {
+    "question": "Which Nintendo game features a character named Kirby?",
+    "answers": [
+      {"text": "Kirby's Dream Land", "correct": True},
+      {"text": "Super Mario Bros.", "correct": False},
+      {"text": "The Legend of Zelda", "correct": False}
+    ]
+    },
+    {
         "question": "Where was Nintendo founded?",
         "answers": [
             {"text": "Kyoto", "correct": False},
@@ -158,7 +174,31 @@ questions_data = [
             {"text": "Super Nintendo Entertainment System (SNES)", "correct": False},
             {"text": "Nintendo 64", "correct": False}
         ]
-    }
+    },
+      {
+    "question": "Which Nintendo console was the first to be released in a portable form factor?",
+    "answers": [
+      {"text": "Game Boy", "correct": True},
+      {"text": "Nintendo DS", "correct": False},
+      {"text": "Nintendo Switch", "correct": False}
+    ]
+  },
+  {
+    "question": "In which year was the Nintendo Switch released?",
+    "answers": [
+      {"text": "2017", "correct": True},
+      {"text": "2016", "correct": False},
+      {"text": "2018", "correct": False}
+    ]
+  },
+  {
+    "question": "What is the name of the princess that Link must rescue in \"The Legend of Zelda\" games?",
+    "answers": [
+      {"text": "Zelda", "correct": True},
+      {"text": "Princess Peach", "correct": False},
+      {"text": "Princess Daisy", "correct": False}
+    ]
+  }
 ]
 
 
