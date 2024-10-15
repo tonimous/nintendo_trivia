@@ -38,166 +38,166 @@ except sqlite3.Error as e:
     exit(1)
 
 # Insert questions and answers into database
-questions_data = [
-    {
-        "question": "When was Nintendo founded?",
-        "answers": [
-            {"text": "23 September 1889", "correct": True},
-            {"text": "15 October 1899", "correct": False},
-            {"text": "01 May 1901", "correct": False}
-        ]
-    },
-    {
+[
+  {
+    "question": "When was Nintendo founded?",
+    "answers": [
+      {"text": "23 September 1889", "correct": true},
+      {"text": "15 October 1899", "correct": false},
+      {"text": "01 May 1901", "correct": false}
+    ]
+  },
+  {
     "question": "In which \"Pokémon\" game was the Johto region introduced?",
     "answers": [
-      {"text": "Pokémon Gold/Silver", "correct": True},
-      {"text": "Pokémon Ruby/Sapphire", "correct": False},
-      {"text": "Pokémon Diamond/Pearl", "correct": False}
+      {"text": "Pokémon Gold/Silver", "correct": true},
+      {"text": "Pokémon Ruby/Sapphire", "correct": false},
+      {"text": "Pokémon Diamond/Pearl", "correct": false}
     ]
-    },
-    {
+  },
+  {
     "question": "Which Nintendo game features a character named Kirby?",
     "answers": [
-      {"text": "Kirby's Dream Land", "correct": True},
-      {"text": "Super Mario Bros.", "correct": False},
-      {"text": "The Legend of Zelda", "correct": False}
-    ]
-    },
-    {
-        "question": "Where was Nintendo founded?",
-        "answers": [
-            {"text": "Kyoto", "correct": False},
-            {"text": "Saporo", "correct": False},
-            {"text": "Shimogyō-Ku", "correct": True}
-        ]
-    },
-    {
-        "question": "Who founded Nintendo?",
-        "answers": [
-            {"text": "Fusajiro Yamauchi", "correct": True},
-            {"text": "Hidetaka Miyazaki", "correct": False},
-            {"text": "Shigeru Miyamoto", "correct": False}
-        ]
-    },
-    {
-        "question": "Which console was the successor of WiiU?",
-        "answers": [
-            {"text": "Nintendo Switch", "correct": True},
-            {"text": "Nintendo Wii", "correct": False},
-            {"text": "Nintendo GameCube", "correct": False}
-        ]
-    },
-    {
-        "question": "\"Yoshi's Crafted World\" is exclusive to which Nintendo console?",
-        "answers": [
-            {"text": "Nintendo GameBoy", "correct": False},
-            {"text": "Nintendo Switch", "correct": True},
-            {"text": "Nintendo 64", "correct": False}
-        ]
-    },
-    {
-        "question": "Which year did Nintendo win an Emmy for their original control pad?",
-        "answers": [
-            {"text": "2006", "correct": False},
-            {"text": "2007", "correct": True},
-            {"text": "2008", "correct": False}
-        ]
-    },
-    {
-        "question": "Which is the best-selling Nintendo exclusive game of all time?",
-        "answers": [
-            {"text": "Wii Sports", "correct": True},
-            {"text": "Super Mario Bros", "correct": False},
-            {"text": "Pokemon Red/Green/Blue/Yellow", "correct": False}
-        ]
-    },
-    {
-        "question": "Luigi is what relation to Super Mario?",
-        "answers": [
-            {"text": "His Uncle", "correct": False},
-            {"text": "His Brother", "correct": True},
-            {"text": "His Friend", "correct": False}
-        ]
-    },
-    {
-        "question": "Which year did Mario go three dimensional?",
-        "answers": [
-            {"text": "1994", "correct": False},
-            {"text": "1995", "correct": False},
-            {"text": "1996", "correct": True}
-        ]
-    },
-    {
-        "question": "Which \"Legend Of Zelda\" game celebrated its 20th anniversary at the end of April 2020?",
-        "answers": [
-            {"text": "The Legend Of Zelda: Majora's Mask.", "correct": True},
-            {"text": "The Legend of Zelda: Breath of the Wild", "correct": False},
-            {"text": "The Legend of Zelda: Ocarina of Time", "correct": False}
-        ]
-    },
-        {
-        "question": "What was the first handheld console released by Nintendo?",
-        "answers": [
-            {"text": "Game Boy", "correct": True},
-            {"text": "Nintendo DS", "correct": False},
-            {"text": "Game & Watch", "correct": False}
-        ]
-    },
-    {
-        "question": "Which game series features a character named Samus Aran?",
-        "answers": [
-            {"text": "Metroid", "correct": True},
-            {"text": "Kirby", "correct": False},
-            {"text": "Donkey Kong", "correct": False}
-        ]
-    },
-    {
-        "question": "What is the name of Nintendo’s famous fighting game franchise?",
-        "answers": [
-            {"text": "Super Smash Bros", "correct": True},
-            {"text": "Fire Emblem", "correct": False},
-            {"text": "Arms", "correct": False}
-        ]
-    },
-    {
-        "question": "Which character is known as the hero of Hyrule in \"The Legend of Zelda\" series?",
-        "answers": [
-            {"text": "Link", "correct": True},
-            {"text": "Zelda", "correct": False},
-            {"text": "Ganon", "correct": False}
-        ]
-    },
-    {
-        "question": "What was Nintendo’s first home console?",
-        "answers": [
-            {"text": "Nintendo Entertainment System (NES)", "correct": True},
-            {"text": "Super Nintendo Entertainment System (SNES)", "correct": False},
-            {"text": "Nintendo 64", "correct": False}
-        ]
-    },
-      {
-        "question": "Which Nintendo console was the first to be released in a portable form factor?",
-        "answers": [
-        {"text": "Game Boy", "correct": True},
-        {"text": "Nintendo DS", "correct": False},
-        {"text": "Nintendo Switch", "correct": False}
+      {"text": "Kirby's Dream Land", "correct": true},
+      {"text": "Super Mario Bros.", "correct": false},
+      {"text": "The Legend of Zelda", "correct": false}
     ]
   },
   {
-        "question": "In which year was the Nintendo Switch released?",
-        "answers": [
-        {"text": "2017", "correct": True},
-        {"text": "2016", "correct": False},
-        {"text": "2018", "correct": False}
+    "question": "Where was Nintendo founded?",
+    "answers": [
+      {"text": "Kyoto", "correct": false},
+      {"text": "Saporo", "correct": false},
+      {"text": "Shimogyō-Ku", "correct": true}
     ]
   },
   {
-        "question": "What is the name of the princess that Link must rescue in \"The Legend of Zelda\" games?",
-        "answers": [
-        {"text": "Zelda", "correct": True},
-        {"text": "Princess Peach", "correct": False},
-        {"text": "Princess Daisy", "correct": False}
-        ]
+    "question": "Who founded Nintendo?",
+    "answers": [
+      {"text": "Fusajiro Yamauchi", "correct": true},
+      {"text": "Hidetaka Miyazaki", "correct": false},
+      {"text": "Shigeru Miyamoto", "correct": false}
+    ]
+  },
+  {
+    "question": "Which console was the successor of WiiU?",
+    "answers": [
+      {"text": "Nintendo Switch", "correct": true},
+      {"text": "Nintendo Wii", "correct": false},
+      {"text": "Nintendo GameCube", "correct": false}
+    ]
+  },
+  {
+    "question": "\"Yoshi's Crafted World\" is exclusive to which Nintendo console?",
+    "answers": [
+      {"text": "Nintendo GameBoy", "correct": false},
+      {"text": "Nintendo Switch", "correct": true},
+      {"text": "Nintendo 64", "correct": false}
+    ]
+  },
+  {
+    "question": "Which year did Nintendo win an Emmy for their original control pad?",
+    "answers": [
+      {"text": "2006", "correct": false},
+      {"text": "2007", "correct": true},
+      {"text": "2008", "correct": false}
+    ]
+  },
+  {
+    "question": "Which is the best-selling Nintendo exclusive game of all time?",
+    "answers": [
+      {"text": "Wii Sports", "correct": true},
+      {"text": "Super Mario Bros", "correct": false},
+      {"text": "Pokemon Red/Green/Blue/Yellow", "correct": false}
+    ]
+  },
+  {
+    "question": "Luigi is what relation to Super Mario?",
+    "answers": [
+      {"text": "His Uncle", "correct": false},
+      {"text": "His Brother", "correct": true},
+      {"text": "His Friend", "correct": false}
+    ]
+  },
+  {
+    "question": "Which year did Mario go three dimensional?",
+    "answers": [
+      {"text": "1994", "correct": false},
+      {"text": "1995", "correct": false},
+      {"text": "1996", "correct": true}
+    ]
+  },
+  {
+    "question": "Which \"Legend Of Zelda\" game celebrated its 20th anniversary at the end of April 2020?",
+    "answers": [
+      {"text": "The Legend Of Zelda: Majora's Mask.", "correct": true},
+      {"text": "The Legend of Zelda: Breath of the Wild", "correct": false},
+      {"text": "The Legend of Zelda: Ocarina of Time", "correct": false}
+    ]
+  },
+  {
+    "question": "What was the first handheld console released by Nintendo?",
+    "answers": [
+      {"text": "Game Boy", "correct": true},
+      {"text": "Nintendo DS", "correct": false},
+      {"text": "Game & Watch", "correct": false}
+    ]
+  },
+  {
+    "question": "Which game series features a character named Samus Aran?",
+    "answers": [
+      {"text": "Metroid", "correct": true},
+      {"text": "Kirby", "correct": false},
+      {"text": "Donkey Kong", "correct": false}
+    ]
+  },
+  {
+    "question": "What is the name of Nintendo’s famous fighting game franchise?",
+    "answers": [
+      {"text": "Super Smash Bros", "correct": true},
+      {"text": "Fire Emblem", "correct": false},
+      {"text": "Arms", "correct": false}
+    ]
+  },
+  {
+    "question": "Which character is known as the hero of Hyrule in \"The Legend of Zelda\" series?",
+    "answers": [
+      {"text": "Link", "correct": true},
+      {"text": "Zelda", "correct": false},
+      {"text": "Ganon", "correct": false}
+    ]
+  },
+  {
+    "question": "What was Nintendo’s first home console?",
+    "answers": [
+      {"text": "Nintendo Entertainment System (NES)", "correct": true},
+      {"text": "Super Nintendo Entertainment System (SNES)", "correct": false},
+      {"text": "Nintendo 64", "correct": false}
+    ]
+  },
+  {
+    "question": "Which Nintendo console was the first to be released in a portable form factor?",
+    "answers": [
+      {"text": "Game Boy", "correct": true},
+      {"text": "Nintendo DS", "correct": false},
+      {"text": "Nintendo Switch", "correct": false}
+    ]
+  },
+  {
+    "question": "In which year was the Nintendo Switch released?",
+    "answers": [
+      {"text": "2017", "correct": true},
+      {"text": "2016", "correct": false},
+      {"text": "2018", "correct": false}
+    ]
+  },
+  {
+    "question": "What is the name of the princess that Link must rescue in \"The Legend of Zelda\" games?",
+    "answers": [
+      {"text": "Zelda", "correct": true},
+      {"text": "Princess Peach", "correct": false},
+      {"text": "Princess Daisy", "correct": false}
+    ]
   }
 ]
 
