@@ -176,28 +176,28 @@ questions_data = [
         ]
     },
       {
-    "question": "Which Nintendo console was the first to be released in a portable form factor?",
-    "answers": [
-      {"text": "Game Boy", "correct": True},
-      {"text": "Nintendo DS", "correct": False},
-      {"text": "Nintendo Switch", "correct": False}
+        "question": "Which Nintendo console was the first to be released in a portable form factor?",
+        "answers": [
+        {"text": "Game Boy", "correct": True},
+        {"text": "Nintendo DS", "correct": False},
+        {"text": "Nintendo Switch", "correct": False}
     ]
   },
   {
-    "question": "In which year was the Nintendo Switch released?",
-    "answers": [
-      {"text": "2017", "correct": True},
-      {"text": "2016", "correct": False},
-      {"text": "2018", "correct": False}
+        "question": "In which year was the Nintendo Switch released?",
+        "answers": [
+        {"text": "2017", "correct": True},
+        {"text": "2016", "correct": False},
+        {"text": "2018", "correct": False}
     ]
   },
   {
-    "question": "What is the name of the princess that Link must rescue in \"The Legend of Zelda\" games?",
-    "answers": [
-      {"text": "Zelda", "correct": True},
-      {"text": "Princess Peach", "correct": False},
-      {"text": "Princess Daisy", "correct": False}
-    ]
+        "question": "What is the name of the princess that Link must rescue in \"The Legend of Zelda\" games?",
+        "answers": [
+        {"text": "Zelda", "correct": True},
+        {"text": "Princess Peach", "correct": False},
+        {"text": "Princess Daisy", "correct": False}
+        ]
   }
 ]
 
